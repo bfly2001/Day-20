@@ -9,4 +9,19 @@
         </style>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
+    <body>
+        <section id="app" class="section container">
+            <article class="message" :class="accordionClasses">
+                <div class="message-header" @click="toggleAccordion">
+                    Hellow World
+                </div>
+                <div class="message-body">
+                    <div class="message-content">
+                        This is some content
+                    </div>
+                </div>
+            </article>
+        </section>
+        
+    </body>
 </html>
