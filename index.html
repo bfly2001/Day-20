@@ -13,7 +13,7 @@
         <section id="app" class="section container">
             <article class="message" :class="accordionClasses">
                 <div class="message-header" @click="toggleAccordion">
-                    Hellow World
+                    Hello World
                 </div>
                 <div class="message-body">
                     <div class="message-content">
@@ -22,6 +22,27 @@
                 </div>
             </article>
         </section>
-        
+        <script>
+            const app = new Vue({
+                el: '#app',
+                data: {
+                    isOpen: true
+                },
+                methods: {
+                    toggleAccordion: function() {
+                        this.isOpen = !this.isOpen;
+                    }
+                },
+                computed: {
+                    accordionClasses: function() {
+                        return {
+                            'is-closed': !this.isOpen,
+                            'is-primary': !this.isOpen,
+                            'is-dark': !this.isOpen
+                        };
+                    }
+                }
+            });
+        </script>
     </body>
 </html>
